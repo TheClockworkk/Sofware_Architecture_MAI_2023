@@ -17,11 +17,12 @@ Person(user, "пользователь")
 
 System_Ext(web_site, "клиентский веб-сайт", "HTML, CSS, JavaScript, React", "веб-интерфейс")
 
+
 System_Boundary(conference_site, "Сайт блогов") {
    'Container(web_site, "Клиентский веб-сайт", ")
    Container(client_service, "сервис авторизации", "C++", "сервис управления пользователями", $tags = "microService")    
-   Container(post_service, "сервис докладов", "C++", "сервис управления докладами", $tags = "microService") 
-   Container(blog_service, "сервис конференций", "C++", "сервис управления конференциями", $tags = "microService")  
+   Container(speech_service, "сервис докладов", "C++", "сервис управления докладами", $tags = "microService") 
+   Container(conference_service, "сервис конференций", "C++", "сервис управления конференциями", $tags = "microService")  
    ContainerDb(db, "БД", "MySQL", "хранение данных о докладах, конференциях и пользователях", $tags = "storage")
    
 }
